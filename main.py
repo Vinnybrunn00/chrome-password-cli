@@ -4,17 +4,17 @@ from rich import print
 
 MSG = '[yellow]usage[/]: main.py [green]-l --local[/] file [green]-d --data[/] file\n\npositional arguments:\n   -l, --Local, Treats the Local State file\n   -d, --data, Treats the Login Data file\n'
 
-parser = argparse.ArgumentParser('Resolver script')
-parser.add_argument('-l', '--local', help='arquivos Local State')
-parser.add_argument('-d', '--data', help='arquivos Login Data')
+PARSER = argparse.ArgumentParser('Resolver script')
+PARSER.add_argument('-l', '--local', help='arquivos Local State')
+PARSER.add_argument('-d', '--data', help='arquivos Login Data')
 
-args = parser.parse_args()
+ARGS = PARSER.parse_args()
 
-locs = args.local
-dats = args.data
+LOCS = ARGS.local
+DATS = ARGS.data
 
-PATH_LOCAL = locs
-LOGIN_PATH = dats
+PATH_LOCAL = LOCS
+LOGIN_PATH = DATS
 
 chrome_db = 'chrome.db'
 
